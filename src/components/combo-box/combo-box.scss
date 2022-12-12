@@ -1,0 +1,60 @@
+$default_color: #6495ED;
+$combobox_color: #696969;
+$option_list_color: #D3D3D3;
+$scroll_color: #C0C0C0;
+$list_color: #999;
+$white_color: white;
+
+.combo-box {
+  height: 20px;
+  padding: 5px 10px;
+  border-radius: 10px;
+  border: 2px solid $default_color;
+  font-size: 14px;
+  font-weight: 400;
+  color: $combobox_color;
+}
+
+.option-list {
+  border: 1px solid $list_color;
+  list-style: none;
+  margin-top: 0;
+  max-height: 143px;
+  overflow-y: auto;
+  padding-left: 0;
+  width: calc(172px + 1rem);
+  padding: 5px;
+  border-radius: 10px;
+  color: $combobox_color;
+  border: 1px solid $option_list_color;
+}
+
+.option-list {
+  &::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $scroll_color;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    border: 3px solid $default_color;
+  }
+
+}
+
+.no-option,
+.option {
+  margin: 10px 5px;
+  padding: 5px;
+
+  &:hover:not(.no-option) {
+    background: $default_color;
+    color: $white_color;
+    border-radius: 10px;
+  }
+}
+

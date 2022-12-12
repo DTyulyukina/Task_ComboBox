@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Combobox Component Renders correctly Combobox component 1`] = `
+<form
+  onClick={[Function]}
+  onFocus={[Function]}
+  onKeyDown={[Function]}
+  onMouseLeave={[Function]}
+  style={
+    Object {
+      "display": "inline-block",
+      "height": "auto",
+    }
+  }
+>
+  <input
+    className="combo-box"
+    onChange={[Function]}
+    value=""
+  />
+  <div
+    className="option-list"
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  >
+    <div
+      className="option"
+      onClick={[Function]}
+    >
+      winter
+    </div>
+    <div
+      className="option"
+      onClick={[Function]}
+    >
+      spring
+    </div>
+    <div
+      className="option"
+      onClick={[Function]}
+    >
+      summer
+    </div>
+    <div
+      className="option"
+      onClick={[Function]}
+    >
+      autumn
+    </div>
+  </div>
+</form>
+`;
