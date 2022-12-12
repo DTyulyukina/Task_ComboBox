@@ -5,9 +5,10 @@ import { ComboBox } from '../src/components/combo-box';
 
 import '@testing-library/jest-dom';
 
-const optionsTest = ['winter', 'spring', 'summer', 'autumn'];
-const valueTest = '';
-const changeTestMock = jest.fn();
+const optionsTest: string[] = ['winter', 'spring', 'summer', 'autumn'];
+const valueTest: string | undefined = undefined;
+const changeTestMock: typeof jest.fn = jest.fn();
+const defaultValueTest: string = 'spring';
 
 describe('Combobox Component', () => {
   test('Renders correctly Combobox component', () => {
@@ -16,6 +17,7 @@ describe('Combobox Component', () => {
         value={valueTest}
         optionList={optionsTest}
         onChange={changeTestMock}
+        defaultValue={defaultValueTest}
       />
     ).toJSON();
     expect(tree).toMatchSnapshot();
@@ -27,15 +29,16 @@ describe('Combobox Component', () => {
         value={valueTest}
         optionList={optionsTest}
         onChange={changeTestMock}
+        defaultValue={defaultValueTest}
       />
     );
 
-    fireEvent.change(screen.getByDisplayValue(''), {
-      target: { value: '' }
+    fireEvent.change(screen.getByDisplayValue(defaultValueTest), {
+      target: { value: defaultValueTest }
     });
 
     await waitFor(() => {
-      expect(screen.getByDisplayValue('')).toBeInTheDocument();
+      expect(screen.getByDisplayValue(defaultValueTest)).toBeInTheDocument();
     });
   });
 });
